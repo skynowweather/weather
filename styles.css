@@ -16,12 +16,15 @@ header {
   top: 0;
   left: 0;
   z-index: 1000; /* Ensure it stays on top */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .hamburger {
