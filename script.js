@@ -1,8 +1,3 @@
-function toggleMenu() {
-    const menu = document.querySelector('.nav-menu');
-    menu.classList.toggle('active');
-}
-
 async function getWeather() {
     const city = document.getElementById('city').value;
     if (!city) {
@@ -11,7 +6,7 @@ async function getWeather() {
         return;
     }
 
-    const url = `https://api.weatherapi.com/v1/current.json?key=75878812bd994bbab9f23420241209&q=${encodeURIComponent(city)}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${encodeURIComponent(city)}`;
 
     try {
         const response = await fetch(url);
@@ -33,8 +28,8 @@ async function getWeather() {
 function displayWeather(data) {
     const locationWeatherHtml = `
         <h1>${data.location.name}, ${data.location.country}</h1>
-        <h1>${data.current.temp_f} °F</h1>
-        <h2>${data.current.condition.text}</h2>
+        <h2>${data.current.temp_f} °F</h2>
+        <h3>${data.current.condition.text}</h3>
     `;
 
     const weatherHtml = `
