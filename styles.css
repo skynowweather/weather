@@ -32,7 +32,6 @@ body {
 }
 
 .screen {
-  display: none;
   margin-top: 60px; /* Adjust for navbar height */
   padding: 20px;
 }
