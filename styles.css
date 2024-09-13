@@ -14,12 +14,13 @@ nav {
   box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-/* Adjust the logo and menu spacing */
+/* Logo in the Navbar */
 nav .logo {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Menu in the Navbar */
 nav .menu {
   display: flex;
   gap: 15px;
@@ -29,13 +30,14 @@ nav .menu a {
   color: #ffffff; /* White text for menu links */
   text-decoration: none;
   font-size: 16px;
+  transition: color 0.3s;
 }
 
 nav .menu a:hover {
   text-decoration: underline;
 }
 
-/* Adjust the search button in the navbar */
+/* Search Button in the Navbar */
 nav .search-button {
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
@@ -54,7 +56,7 @@ nav .search-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-/* Adjust layout to avoid overflow */
+/* Container for Main Content */
 .container {
   width: 80%;
   max-width: 800px;
@@ -98,12 +100,12 @@ button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-/* Additional Styles */
+/* Weather Info Styles */
 #location-weather, #weather-info {
   margin-top: 20px;
 }
 
-.weather-box {
+.weather-box, .forecast-box {
   background: #e0e0e0;
   border: 1px solid #ccc;
   padding: 15px;
@@ -113,21 +115,12 @@ button:hover {
   min-width: 200px;
 }
 
+/* Forecast Info Styles */
 #forecast-info {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-}
-
-.forecast-box {
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  flex: 1;
-  min-width: 200px;
 }
 
 /* Dark Mode Styles */
