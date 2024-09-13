@@ -48,4 +48,13 @@ function displayWeather(data) {
         </div>
         <div class="weather-box">
             <p><strong>Wind Speed:</strong> ${data.current.wind_mph} mph</p>
-            <p><strong
+            <p><strong>Wind Direction:</strong> ${data.current.wind_dir}</p>
+        </div>
+    `;
+
+    document.getElementById('location-weather').innerHTML = locationWeatherHtml;
+    document.getElementById('weather-info').innerHTML = weatherHtml;
+}
+
+function showHome() {
+    document
