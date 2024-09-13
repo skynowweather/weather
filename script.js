@@ -26,7 +26,8 @@ async function getWeather() {
 }
 
 function displayWeather(data) {
-    const locationWeatherHtml = `
+    const locationWeatherHtml = 
+    const state = location.region;`
         <h1>${location.name}${state ? ', ' + state : ''}, ${location.country}</h1>
         <h2>${data.current.temp_f} °F</h2>
         <h3>${data.current.condition.text}</h3>
