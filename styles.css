@@ -1,151 +1,131 @@
-/* General styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Light background for the body */
   margin: 0;
   padding: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  position: fixed; /* Fix the header at the top */
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure it stays on top */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #fff;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger .bar {
-  background-color: #fff;
-  height: 3px;
-  width: 25px;
-  margin: 4px 0;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.nav-menu a:hover {
-  text-decoration: underline;
-}
-
-/* Main content */
-main {
-  padding: 20px;
-  margin-top: 60px; /* Ensure content isn't hidden behind the fixed header */
-}
-
 .container {
   width: 80%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
-  background: #fff;
+  background: #ffffff; /* White background for the container */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s;
 }
 
-/* Search page specific styles */
+/* Navigation Bar */
+nav {
+  background-color: #0056b3; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav .menu {
+  display: flex;
+  gap: 15px;
+}
+
+nav .menu a {
+  color: #ffffff; /* White text for menu links */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav .menu a:hover {
+  text-decoration: underline;
+}
+
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Search Page Styles */
 .search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 100px; /* Space below the nav bar */
 }
 
 input[type="text"] {
-  padding: 15px;
-  font-size: 18px;
-  border: 2px solid #007bff;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 400px; /* Increase maximum width for better visibility */
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
-  background: #f9f9f9; /* Light background for contrast */
-  transition: box-shadow 0.3s, border-color 0.3s;
-}
-
-input[type="text"]::placeholder {
-  color: #aaa;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #0056b3; /* Blue border */
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
 input[type="text"]:focus {
-  border-color: #0056b3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on focus */
-  outline: none;
+  border-color: #003d7a; /* Darker blue on focus */
 }
 
-/* Button styles */
 button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background */
-  color: #fff;
+  padding: 12px 24px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #0056b3; /* Blue background */
+  color: #ffffff; /* White text */
   border: none;
-  border-radius: 12px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background: linear-gradient(45deg, #0056b3, #003d7a); /* Darker gradient on hover */
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background-color: #003d7a; /* Darker blue on hover */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+/* Home Page Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #0056b3; /* Blue text for headers */
+}
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #333;
-    padding: 10px;
-    width: 200px;
-  }
+#location-weather, #weather-info {
+  margin-top: 20px;
+  text-align: center;
+}
 
-  .nav-menu.active {
-    display: flex;
-  }
+.weather-box, .forecast-box {
+  background: #e0e0e0; /* Light grey background */
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
 
-  .
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .container {
+  background: #444;
+}
+
+.dark-mode nav {
+  background-color: #00274d; /* Darker blue for dark mode */
+}
+
+.dark-mode button {
+  background-color: #004080; /* Darker blue for buttons in dark mode */
+}
+
+.dark-mode input[type="text"] {
+  border-color: #004080; /* Darker blue border in dark mode */
+}
