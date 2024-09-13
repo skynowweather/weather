@@ -37,11 +37,11 @@ body {
 }
 
 #home-screen {
-  display: block;
+  /* Only visible on home.html */
 }
 
 #weather-screen {
-  display: none;
+  /* Only visible on search.html */
 }
 
 h1 {
