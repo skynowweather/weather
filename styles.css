@@ -2,7 +2,7 @@
 nav {
   background-color: #0056b3; /* Blue background for the nav bar */
   color: #ffffff; /* White text for the nav bar */
-  padding: 15px 20px; /* Increased padding for better balance */
+  padding: 12px 20px; /* Balanced padding */
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,45 +10,44 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for visibility */
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  box-sizing: border-box;
 }
 
-/* Adjust the logo and menu spacing */
+/* Logo in the Navbar */
 nav .logo {
-  font-size: 24px; /* Slightly larger font for better prominence */
+  font-size: 22px; /* Prominent font size */
+  font-weight: bold;
 }
 
+/* Menu in the Navbar */
 nav .menu {
   display: flex;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 15px; /* Even spacing */
 }
 
 nav .menu a {
   color: #ffffff; /* White text for menu links */
   text-decoration: none;
-  font-size: 18px; /* Larger font for readability */
+  font-size: 16px; /* Readable font size */
   transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav .menu a:hover {
   text-decoration: underline;
-  color: #e0e0e0; /* Lighter color on hover for contrast */
+  color: #e0e0e0; /* Lighter color on hover */
 }
 
-/* Adjust the search button in the navbar */
+/* Search Button in the Navbar */
 nav .search-button {
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
   border: none;
-  padding: 10px 20px; /* Slightly larger padding */
-  font-size: 18px; /* Larger font for consistency */
-  border-radius: 5px; /* Slightly more rounded corners */
+  padding: 8px 16px; /* Balanced padding */
+  font-size: 16px; /* Consistent font size */
+  border-radius: 4px; /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 nav .search-button:hover {
@@ -57,40 +56,40 @@ nav .search-button:hover {
 
 /* Container for Main Content */
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px; /* Increased max-width for larger content area */
-  margin: 90px auto 60px; /* Adjust margin-top to accommodate increased navbar height */
-  padding: 25px; /* Increased padding for better spacing */
+  margin: 80px auto; /* Adjust margin for navbar height */
+  padding: 20px; /* Balanced padding */
   background: #ffffff; /* White background */
-  border-radius: 10px; /* Slightly more rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better separation */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: background 0.3s;
 }
 
 /* Search Page Specific Styles */
 .search {
   display: flex;
-  flex-direction: column; /* Stack input and button vertically */
-  align-items: center; /* Center items horizontally */
-  gap: 15px; /* Increased space between input and button */
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Even spacing */
 }
 
 input {
-  padding: 14px; /* Slightly larger padding */
-  font-size: 18px; /* Larger font size for consistency */
-  border: 1px solid #ccc;
-  border-radius: 5px; /* Slightly more rounded corners */
-  width: 100%; /* Full width */
-  max-width: 450px; /* Increased maximum width */
+  padding: 12px; /* Balanced padding */
+  font-size: 16px; /* Consistent font size */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%;
+  max-width: 400px; /* Max width for input */
 }
 
 button {
-  padding: 14px 30px; /* Slightly larger padding */
-  font-size: 18px; /* Larger font size for consistency */
+  padding: 12px 24px; /* Balanced padding */
+  font-size: 16px; /* Consistent font size */
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
   border: none;
-  border-radius: 5px; /* Slightly more rounded corners */
+  border-radius: 4px; /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -101,37 +100,37 @@ button:hover {
 
 /* Weather Info Styles */
 #location-weather, #weather-info {
-  margin-top: 30px; /* Increased margin-top for better spacing */
+  margin-top: 20px; /* Balanced margin */
 }
 
-.weather-box, .forecast-box {
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  padding: 20px; /* Increased padding */
-  border-radius: 8px; /* Slightly more rounded corners */
+.weather-box {
+  background: #f8f8f8; /* Lighter background */
+  border: 1px solid #ddd; /* Light border */
+  padding: 15px; /* Balanced padding */
+  border-radius: 5px; /* Rounded corners */
   text-align: center;
   flex: 1;
-  min-width: 250px; /* Increased minimum width */
+  min-width: 220px; /* Minimum width */
 }
 
 /* Forecast Info Styles */
 #forecast-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px; /* Even spacing */
   justify-content: center;
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-  background-color: #333;
-  color: #f0f0f0;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
 }
 
 .dark-mode .container {
-  background: #444;
+  background: #3c3c3c;
 }
 
 .dark-mode button {
-  background-color: #555;
+  background-color: #444;
 }
