@@ -11,29 +11,25 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <div class="navbar">
-        <h1>SkyNow</h1>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <header>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Home</a>
+                <a href="search.html">Search Weather</a>
+            </nav>
         </div>
-        <div class="nav-links">
-            <a href="home.html"><button>Home</button></a>
-            <a href="search.html"><button>Search Weather</button></a>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Welcome to SkyNow</h1>
+            <p>Your go-to website for real-time weather updates.</p>
         </div>
-    </div>
-
-    <div id="home-screen" class="screen">
-        <h1>Welcome to SkyNow</h1>
-        <p>SkyNow provides you with the latest weather information including temperature, humidity, wind speed, and more.</p>
-        <p>Use the search feature to get real-time weather updates for any city around the globe.</p>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector('.navbar').classList.toggle('active');
-        }
-    </script>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
