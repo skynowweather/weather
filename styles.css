@@ -79,34 +79,42 @@ main {
 /* Search page specific styles */
 .search {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
 }
 
 input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
   width: 100%;
-  max-width: 300px; /* Limit the maximum width */
-  margin-right: 10px;
+  max-width: 400px; /* Increase maximum width for better visibility */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 30px;
+  font-size: 18px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to match input box */
 }
 
 button:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Responsive styles */
