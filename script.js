@@ -1,20 +1,17 @@
-// Toggle the menu visibility for mobile view
 function toggleMenu() {
-    document.querySelector('.navbar').classList.toggle('active');
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
 }
 
-// Function to handle weather fetching and display
 async function getWeather() {
-    const apiKey = '75878812bd994bbab9f23420241209'; // Replace with your actual API key
     const city = document.getElementById('city').value;
-
     if (!city) {
         document.getElementById('location-weather').innerHTML = `<p>Please enter a city name.</p>`;
         document.getElementById('weather-info').innerHTML = '';
         return;
     }
 
-    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=75878812bd994bbab9f23420241209&q=${encodeURIComponent(city)}`;
 
     try {
         const response = await fetch(url);
@@ -33,16 +30,13 @@ async function getWeather() {
     }
 }
 
-// Function to display the weather information
 function displayWeather(data) {
-    // Location and weather condition
     const locationWeatherHtml = `
         <h1>${data.location.name}, ${data.location.country}</h1>
         <h1>${data.current.temp_f} °F</h1>
         <h2>${data.current.condition.text}</h2>
     `;
 
-    // Weather details
     const weatherHtml = `
         <div class="weather-box">
             <p><strong>Feels Like:</strong> ${data.current.feelslike_f} °F</p>
@@ -62,8 +56,3 @@ function displayWeather(data) {
     document.getElementById('location-weather').innerHTML = locationWeatherHtml;
     document.getElementById('weather-info').innerHTML = weatherHtml;
 }
-
-// Event listener for the hamburger menu (if needed)
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.hamburger')?.addEventListener('click', toggleMenu);
-});
