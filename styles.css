@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  font-family: 'Roboto', sans-serif; /* Apply the font to the entire page */
+  font-family: 'Lato', sans-serif; /* Apply the Lato font globally */
 }
 
 /* Navigation Bar */
@@ -17,7 +17,7 @@ nav {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; /* Apply the font to the nav bar */
+  font-family: 'Lato', sans-serif; /* Apply the Lato font to the nav bar */
 }
 
 /* Logo in the Navbar */
@@ -70,7 +70,7 @@ nav .search-button:hover {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: background 0.3s;
-  font-family: 'Roboto', sans-serif; /* Apply the font to the container */
+  font-family: 'Lato', sans-serif; /* Apply the Lato font to the container */
 }
 
 /* Search Page Specific Styles */
@@ -88,7 +88,7 @@ input {
   border-radius: 4px; /* Rounded corners */
   width: 100%;
   max-width: 400px; /* Max width for input */
-  font-family: 'Roboto', sans-serif; /* Apply the font to inputs */
+  font-family: 'Lato', sans-serif; /* Apply the Lato font to inputs */
 }
 
 button {
