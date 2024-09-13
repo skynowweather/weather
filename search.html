@@ -11,36 +11,34 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <div class="navbar">
-        <h1>SkyNow</h1>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <header>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Home</a>
+                <a href="search.html">Search Weather</a>
+            </nav>
         </div>
-        <div class="nav-links">
-            <a href="home.html"><button>Home</button></a>
-            <a href="search.html"><button>Search Weather</button></a>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Search Weather</h1>
+            <div class="search">
+                <input type="text" id="city" placeholder="Enter city">
+                <button onclick="getWeather()">Get Weather</button>
+            </div>
+            <div id="location-weather">
+                <!-- Location and weather info will be injected here -->
+            </div>
+            <div id="weather-info">
+                <!-- Weather details will be injected here -->
+            </div>
         </div>
-    </div>
-
-    <div id="weather-screen" class="screen">
-        <div class="search">
-            <input type="text" id="city" placeholder="Enter city">
-            <button onclick="getWeather()">Get Weather</button>
-        </div>
-        <div id="location-weather">
-            <!-- Location and weather info will be injected here -->
-        </div>
-        <div id="weather-info">
-            <!-- Weather details will be injected here -->
-        </div>
-    </div>
+    </main>
     <script src="script.js"></script>
-    <script>
-        function toggleMenu() {
-            document.querySelector('.navbar').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
