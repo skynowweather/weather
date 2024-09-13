@@ -24,21 +24,6 @@ body {
   font-size: 24px;
 }
 
-.navbar button {
-  background-color: #004b8d; /* Slightly lighter blue */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.navbar button:hover {
-  background-color: #005a9e; /* Even lighter blue on hover */
-}
-
 .navbar .nav-links {
   display: flex;
   gap: 15px;
@@ -51,47 +36,63 @@ body {
 .navbar .nav-links button {
   background: none;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar .nav-links button:hover {
-  background-color: transparent;
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-/* Adjust the main content area to account for the fixed navbar */
-.screen {
-  margin-top: 60px; /* Adjust for navbar height */
-  padding: 20px;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
 }
 
-/* Responsive Styles */
+.navbar .nav-links.show {
+  display: block;
+}
+
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar h1 {
-    margin-bottom: 10px;
-  }
-
   .navbar .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 20px;
+    background-color: #003c6c;
     flex-direction: column;
-    gap: 10px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar .nav-links a {
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid #004b8d;
+  }
+
+  .navbar .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
 
-@media (max-width: 480px) {
-  .navbar h1 {
-    font-size: 20px;
-  }
-
-  .navbar button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+.navbar.active .nav-links {
+  display: flex;
 }
