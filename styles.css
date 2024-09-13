@@ -1,11 +1,6 @@
 /* Global Styles */
 body {
-  font-family: 'Bebas Neue', sans-serif; /* Apply the Lato font globally */
-  margin: 0; /* Ensure there's no default margin */
-  padding: 0; /* Ensure there's no default padding */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure the body takes full viewport height */
+  font-family: 'Lato', sans-serif; /* Apply the Lato font globally */
 }
 
 /* Navigation Bar */
@@ -22,6 +17,7 @@ nav {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif; /* Apply the Lato font to the nav bar */
 }
 
 /* Logo in the Navbar */
@@ -66,20 +62,15 @@ nav .search-button:hover {
 
 /* Container for Main Content */
 .container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   width: 90%;
   max-width: 900px; /* Increased max-width for larger content area */
-  margin: 80px auto 0; /* Adjust margin for navbar height */
+  margin: 80px auto; /* Adjust margin for navbar height */
   padding: 20px; /* Balanced padding */
   background: #ffffff; /* White background */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: background 0.3s;
+  font-family: 'Lato', sans-serif; /* Apply the Lato font to the container */
 }
 
 /* Search Page Specific Styles */
