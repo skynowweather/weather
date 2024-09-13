@@ -31,30 +31,4 @@ function displayWeather(data) {
     // Location and weather condition
     const locationWeatherHtml = `
         <h1>${data.location.name}, ${data.location.country}</h1>
-        <h1>${data.current.temp_f} °F</h1>
-        <h2>${data.current.condition.text}</h2>
-    `;
-
-    // Weather details
-    const weatherHtml = `
-        <div class="weather-box">
-            <p><strong>Feels Like:</strong> ${data.current.feelslike_f} °F</p>
-        </div>
-        <div class="weather-box">
-            <p><strong>UV Index:</strong> ${data.current.uv}</p>
-        </div>
-        <div class="weather-box">
-            <p><strong>Humidity:</strong> ${data.current.humidity}%</p>
-        </div>
-        <div class="weather-box">
-            <p><strong>Wind Speed:</strong> ${data.current.wind_mph} mph</p>
-            <p><strong>Wind Direction:</strong> ${data.current.wind_dir}</p>
-        </div>
-    `;
-
-    document.getElementById('location-weather').innerHTML = locationWeatherHtml;
-    document.getElementById('weather-info').innerHTML = weatherHtml;
-}
-
-function showHome() {
-    document
+        <h1>${data.current.temp_f
