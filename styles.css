@@ -11,13 +11,17 @@ header {
   background-color: #333;
   color: #fff;
   padding: 10px;
+  position: fixed; /* Fix the header at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .hamburger {
@@ -49,6 +53,7 @@ header {
 /* Main content */
 main {
   padding: 20px;
+  margin-top: 60px; /* Ensure content isn't hidden behind the fixed header */
 }
 
 .container {
