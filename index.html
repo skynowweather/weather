@@ -11,8 +11,18 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <div class="container">
-        <h1>SkyNow</h1>
+    <div class="navbar">
+        <button onclick="showHome()">Home</button>
+        <button onclick="showWeather()">Search Weather</button>
+    </div>
+
+    <div id="home-screen" class="screen">
+        <h1>Welcome to SkyNow</h1>
+        <p>SkyNow provides you with the latest weather information including temperature, humidity, wind speed, and more.</p>
+        <p>Use the search feature to get real-time weather updates for any city around the globe.</p>
+    </div>
+
+    <div id="weather-screen" class="screen" style="display:none;">
         <div class="search">
             <input type="text" id="city" placeholder="Enter city">
             <button onclick="getWeather()">Get Weather</button>
@@ -24,6 +34,7 @@
             <!-- Weather details will be injected here -->
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
