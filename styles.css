@@ -56,15 +56,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.navbar .nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.navbar .nav-links.show {
-  display: block;
-}
-
+/* Media Queries for Mobile View */
 @media (max-width: 768px) {
   .navbar .nav-links {
     display: none;
