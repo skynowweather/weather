@@ -2,7 +2,7 @@
 nav {
   background-color: #0056b3; /* Blue background for the nav bar */
   color: #ffffff; /* White text for the nav bar */
-  padding: 10px 20px;
+  padding: 15px 20px; /* Increased padding for better balance */
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,41 +10,40 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for visibility */
   box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-/* Logo in the Navbar */
+/* Adjust the logo and menu spacing */
 nav .logo {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 24px; /* Slightly larger font for better prominence */
 }
 
-/* Menu in the Navbar */
 nav .menu {
   display: flex;
-  gap: 15px;
+  gap: 20px; /* Increased gap for better spacing */
 }
 
 nav .menu a {
   color: #ffffff; /* White text for menu links */
   text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
+  font-size: 18px; /* Larger font for readability */
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav .menu a:hover {
   text-decoration: underline;
+  color: #e0e0e0; /* Lighter color on hover for contrast */
 }
 
-/* Search Button in the Navbar */
+/* Adjust the search button in the navbar */
 nav .search-button {
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
   border: none;
-  padding: 8px 16px;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 10px 20px; /* Slightly larger padding */
+  font-size: 18px; /* Larger font for consistency */
+  border-radius: 5px; /* Slightly more rounded corners */
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -59,12 +58,12 @@ nav .search-button:hover {
 /* Container for Main Content */
 .container {
   width: 80%;
-  max-width: 800px;
-  margin: 80px auto 50px; /* Adjust margin-top to accommodate navbar height */
-  padding: 20px;
+  max-width: 900px; /* Increased max-width for larger content area */
+  margin: 90px auto 60px; /* Adjust margin-top to accommodate increased navbar height */
+  padding: 25px; /* Increased padding for better spacing */
   background: #ffffff; /* White background */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better separation */
   transition: background 0.3s;
 }
 
@@ -73,25 +72,25 @@ nav .search-button:hover {
   display: flex;
   flex-direction: column; /* Stack input and button vertically */
   align-items: center; /* Center items horizontally */
-  gap: 10px; /* Space between input and button */
+  gap: 15px; /* Increased space between input and button */
 }
 
 input {
-  padding: 12px;
-  font-size: 16px;
+  padding: 14px; /* Slightly larger padding */
+  font-size: 18px; /* Larger font size for consistency */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px; /* Slightly more rounded corners */
   width: 100%; /* Full width */
-  max-width: 400px; /* Maximum width */
+  max-width: 450px; /* Increased maximum width */
 }
 
 button {
-  padding: 12px 25px;
-  font-size: 16px;
+  padding: 14px 30px; /* Slightly larger padding */
+  font-size: 18px; /* Larger font size for consistency */
   background-color: #007bff; /* Blue background */
   color: #ffffff; /* White text */
   border: none;
-  border-radius: 4px;
+  border-radius: 5px; /* Slightly more rounded corners */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -102,24 +101,24 @@ button:hover {
 
 /* Weather Info Styles */
 #location-weather, #weather-info {
-  margin-top: 20px;
+  margin-top: 30px; /* Increased margin-top for better spacing */
 }
 
 .weather-box, .forecast-box {
   background: #e0e0e0;
   border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 20px; /* Increased padding */
+  border-radius: 8px; /* Slightly more rounded corners */
   text-align: center;
   flex: 1;
-  min-width: 200px;
+  min-width: 250px; /* Increased minimum width */
 }
 
 /* Forecast Info Styles */
 #forecast-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px; /* Increased gap for better spacing */
   justify-content: center;
 }
 
