@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyNow - Search Weather</title>
+    <title>SkyNow - Search</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -13,21 +13,21 @@
 <body>
     <header>
         <div class="navbar">
+            <div class="logo">SkyNow</div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <div class="logo">SkyNow</div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="navMenu">
                 <a href="home.html">Home</a>
-                <a href="search.html">Search Weather</a>
+                <a href="search.html">Search</a>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h1>Search Weather</h1>
+            <h1>Search for Weather</h1>
             <div class="search">
                 <input type="text" id="city" placeholder="Enter city">
                 <button onclick="getWeather()">Get Weather</button>
