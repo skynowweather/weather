@@ -88,33 +88,42 @@ input[type="text"] {
   padding: 15px;
   font-size: 18px;
   border: 2px solid #007bff;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 100%;
   max-width: 400px; /* Increase maximum width for better visibility */
-  margin-bottom: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+  background: #f9f9f9; /* Light background for contrast */
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 input[type="text"]::placeholder {
   color: #aaa;
 }
 
+input[type="text"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on focus */
+  outline: none;
+}
+
+/* Button styles */
 button {
   padding: 15px 30px;
   font-size: 18px;
-  background-color: #007bff;
+  background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background */
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to match input box */
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(45deg, #0056b3, #003d7a); /* Darker gradient on hover */
   transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Responsive styles */
@@ -154,5 +163,5 @@ button:hover {
 }
 
 .dark-mode button {
-  background-color: #555;
+  background: linear-gradient(45deg, #555, #333);
 }
