@@ -31,6 +31,16 @@ h<!DOCTYPE html>
             <!-- Weather details will be injected here -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+        <!-- JavaScript for URL clean-up -->
+        // JavaScript to redirect from .html URLs to clean URLs
+        (function() {
+            var path = window.location.pathname;
+            if (path.endsWith('.html')) {
+                // Remove the .html and redirect
+                window.location.pathname = path.slice(0, -5);
+            }
+        })();
+    </script>
 </body>
 </html>
