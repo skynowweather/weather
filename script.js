@@ -53,3 +53,12 @@ function displayWeather(data) {
     document.getElementById('location-weather').innerHTML = locationWeatherHtml;
     document.getElementById('weather-info').innerHTML = weatherHtml;
 }
+
+// JavaScript to redirect from .html URLs to clean URLs
+        (function() {
+            var path = window.location.pathname;
+            if (path.endsWith('.html')) {
+                // Remove the .html and redirect
+                window.location.pathname = path.slice(0, -5);
+            }
+        })();
