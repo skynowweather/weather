@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+
+    <!-- Google Fonts: Bebas Neue -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font globally */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes full viewport height */
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0056b3; /* Blue background for the nav bar */
+            color: #ffffff; /* White text for the nav bar */
+            padding: 12px 20px; /* Balanced padding */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+            box-sizing: border-box;
+        }
+
+        /* Logo in the Navbar */
+        nav .logo {
+            font-size: 22px; /* Prominent font size */
+            font-weight: 700; /* Bold font weight */
+        }
+
+        /* Menu in the Navbar */
+        nav .menu {
+            display: flex;
+            gap: 15px; /* Even spacing */
+        }
+
+        nav .menu a {
+            color: #ffffff; /* White text for menu links */
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        nav .menu a:hover {
+            text-decoration: underline;
+            color: #e0e0e0; /* Lighter color on hover */
+        }
+
+        /* Container for Main Content */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 100px auto 20px; /* Adjust margin for navbar height */
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+        }
+
+        /* 404 Specific Styling */
+        h1 {
+            font-size: 6em;
+            margin-bottom: 20px;
+            color: #ff5c5c; /* Bright red for emphasis */
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003d7a; /* Darker blue on hover */
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">SkyNow</div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="search.html">Search</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page you are looking for does not exist or might have been moved.</p>
+        <a href="home.html">Go back to Home</a>
+    </div>
+
+    <!-- JavaScript for URL clean-up -->
+    <script>
+        // JavaScript to redirect from .html URLs to clean URLs
+        (function() {
+            var path = window.location.pathname;
+            if (path.endsWith('.html')) {
+                // Remove the .html and redirect
+                window.location.pathname = path.slice(0, -5);
+            }
+        })();
+    </script>
+
+</body>
+</html>
